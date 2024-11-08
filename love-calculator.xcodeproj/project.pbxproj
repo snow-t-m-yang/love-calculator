@@ -14,6 +14,9 @@
 		647CDD6A2CDE0154001B51A3 /* love_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CDD692CDE0154001B51A3 /* love_calculatorTests.swift */; };
 		647CDD742CDE0154001B51A3 /* love_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CDD732CDE0154001B51A3 /* love_calculatorUITests.swift */; };
 		647CDD762CDE0154001B51A3 /* love_calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CDD752CDE0154001B51A3 /* love_calculatorUITestsLaunchTests.swift */; };
+		647CDD842CDE0214001B51A3 /* MyListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CDD832CDE0214001B51A3 /* MyListScreen.swift */; };
+		647CDD862CDE043C001B51A3 /* AddListScrren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CDD852CDE043C001B51A3 /* AddListScrren.swift */; };
+		647CDD892CDE0578001B51A3 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CDD882CDE0578001B51A3 /* ColorPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		647CDD6F2CDE0154001B51A3 /* love-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "love-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CDD732CDE0154001B51A3 /* love_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = love_calculatorUITests.swift; sourceTree = "<group>"; };
 		647CDD752CDE0154001B51A3 /* love_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = love_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		647CDD832CDE0214001B51A3 /* MyListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListScreen.swift; sourceTree = "<group>"; };
+		647CDD852CDE043C001B51A3 /* AddListScrren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListScrren.swift; sourceTree = "<group>"; };
+		647CDD882CDE0578001B51A3 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 		647CDD572CDE0153001B51A3 /* love-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				647CDD872CDE053B001B51A3 /* Views */,
+				647CDD822CDE01FE001B51A3 /* Screens */,
 				647CDD582CDE0153001B51A3 /* love_calculatorApp.swift */,
 				647CDD5A2CDE0153001B51A3 /* ContentView.swift */,
 				647CDD5C2CDE0154001B51A3 /* Assets.xcassets */,
@@ -125,6 +133,23 @@
 				647CDD752CDE0154001B51A3 /* love_calculatorUITestsLaunchTests.swift */,
 			);
 			path = "love-calculatorUITests";
+			sourceTree = "<group>";
+		};
+		647CDD822CDE01FE001B51A3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				647CDD832CDE0214001B51A3 /* MyListScreen.swift */,
+				647CDD852CDE043C001B51A3 /* AddListScrren.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		647CDD872CDE053B001B51A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				647CDD882CDE0578001B51A3 /* ColorPickerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647CDD862CDE043C001B51A3 /* AddListScrren.swift in Sources */,
 				647CDD5B2CDE0153001B51A3 /* ContentView.swift in Sources */,
+				647CDD842CDE0214001B51A3 /* MyListScreen.swift in Sources */,
 				647CDD592CDE0153001B51A3 /* love_calculatorApp.swift in Sources */,
+				647CDD892CDE0578001B51A3 /* ColorPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

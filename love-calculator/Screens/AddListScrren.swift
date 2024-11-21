@@ -11,18 +11,24 @@ struct AddListScrren: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var listName: String = ""
-    @State private var color: Color = .blue
-
+    @State private var selectedColor: Color = .blue
+    
+    let onSave: (String, UIColor) -> Void
+    
+    private var isFormValid: Bool {
+        !listName.isEmpty
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "line.3.horizontal.circle.fill")
                 .font(.system(size: 80))
-                .foregroundColor(color)
+                .foregroundColor(selectedColor)
             TextField("List Name", text: $listName)
                 .textFieldStyle(.roundedBorder)
                 .padding([.leading, .trailing], 44)
 
-            ColorPickerView(selectedColor: $color)
+            ColorPickerView(selectedColor: $selectedColor)
         }
         .navigationTitle("New List")
         .navigationBarTitleDisplayMode(.inline)
@@ -33,14 +39,18 @@ struct AddListScrren: View {
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Done") {}
+                Button("Done") {
+                    onSave(listName, UIColor(selectedColor))
+                    
+                }.disabled(!isFormValid)
+
             }
         }
     }
 }
 
 #Preview {
-    NavigationStack {
-        AddListScrren()
-    }
+//    NavigationStack {
+    AddListScrren(onSave: { _, _ in })
+//    }
 }

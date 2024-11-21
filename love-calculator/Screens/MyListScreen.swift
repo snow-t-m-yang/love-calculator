@@ -14,7 +14,7 @@ struct MyListScreen: View {
 
     var body: some View {
         List {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("Testing")
 
             ForEach(myLists, id: \.self) { myList in
                 HStack {
@@ -32,7 +32,7 @@ struct MyListScreen: View {
             }).listRowSeparator(.hidden)
         }.listStyle(.plain)
             .sheet(isPresented: $isPresented, content: {
-                AddListScrren()
+                AddListScrren(onSave: {(_, _) in })
             })
     }
 }

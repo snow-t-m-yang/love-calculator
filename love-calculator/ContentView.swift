@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isPresented: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack {
+            VStack {
+                Button{
+                    isPresented = true
+                } label: {
+                    Text("Add List")
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .font(.headline)
+                }.padding()
+                
+            }.sheet(isPresented: $isPresented){
+                NavigationStack {
+                    AddListScrren { name, color in
+                        // save it!
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
